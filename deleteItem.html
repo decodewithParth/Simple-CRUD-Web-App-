@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Delete Item</title>
+    <style>
+        /* Reset some default styles */
+        body,
+        h1 {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        h1 {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 16px;
+        }
+
+        button[type="submit"] {
+            background-color: #ff4d4d;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 3px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #ff1a1a;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Delete Item</h1>
+        <form id="deleteForm" action="/delete" method="POST">
+            <div class="form-group">
+                <label for="item">Enter Item to Delete:</label>
+                <input type="text" id="item" name="item" required minlength="4">
+                <small>Minimum 4 characters required.</small>
+            </div>
+            <button type="submit">Delete</button>
+        </form>
+    </div>
+</body>
+
+</html>

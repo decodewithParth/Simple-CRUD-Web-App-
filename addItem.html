@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Product Form</title>
+    <style>
+        /* Reset some default styles */
+        body,
+        h1 {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        h1 {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            margin: 0;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-field {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 95%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 16px;
+        }
+
+        button[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 3px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        /* Add more styles as needed */
+    </style>
+</head>
+
+<body>
+    <h1>Product Information Form</h1>
+    <form id="productForm" action="/submit" method="POST">
+        <div class="form-field">
+            <label for="name">Product Name:</label>
+            <input type="text" id="name" name="name" required minlength="5">
+        </div>
+        <div class="form-field">
+            <label for="price">Price (in rupees):</label>
+            <input type="number" id="price" name="price" required min="1">
+        </div>
+        <div class="form-field">
+            <label for="dealer">Dealer Name:</label>
+            <input type="text" id="dealer" name="dealer" required minlength="5">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+
+</html>
